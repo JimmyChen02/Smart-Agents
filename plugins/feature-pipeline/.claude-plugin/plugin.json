@@ -1,0 +1,9 @@
+{
+  "name": "feature-pipeline",
+  "version": "0.1.0",
+  "description": "A four-stage feature pipeline: planner -> coder -> tester -> reviewer subagents, orchestrated by the /ship command.",
+  "author": {
+    "name": "Jimmy"
+  },
+  "keywords": ["pipeline", "subagents", "code-review", "testing"]
+}

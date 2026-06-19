@@ -1,0 +1,13 @@
+{
+  "name": "feature-pipeline-marketplace",
+  "owner": {
+    "name": "Jimmy"
+  },
+  "plugins": [
+    {
+      "name": "feature-pipeline",
+      "source": "./plugins/feature-pipeline",
+      "description": "Four-stage feature pipeline (planner, coder, tester, reviewer) plus the /ship orchestrator command."
+    }
+  ]
+}
