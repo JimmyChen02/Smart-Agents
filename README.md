@@ -1,6 +1,5 @@
-![Smart-Agents banner](./assets/smart-agents-banner.svg)
-
 # Smart-Agents
+![Smart-Agents banner](./assets/smart-agents-banner.svg)
 
 A Claude Code plugin marketplace. It hosts **feature-pipeline** — a four-stage,
 multi-agent pipeline that takes a feature request and runs
