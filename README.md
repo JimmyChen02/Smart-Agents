@@ -1,3 +1,5 @@
+![Smart-Agents banner](./assets/smart-agents-banner.svg)
+
 # Smart-Agents
 
 A Claude Code plugin marketplace. It hosts **feature-pipeline** — a four-stage,
