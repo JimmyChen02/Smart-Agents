@@ -38,13 +38,13 @@ This registers the marketplace. Nothing is installed yet.
 ```
 
 If asked which marketplace, choose `feature-pipeline-marketplace`. The four
-agents and the `/ship` command are now available in **every** project on your
+agents and the `/feature-pipeline:ship` command are now available in **every** project on your
 machine.
 
 **Step 3 — Run the pipeline (any project, any time).**
 
 ```
-/ship <describe the feature you want>
+ /feature-pipeline:ship <describe the feature you want>
 ```
 
 For example:
