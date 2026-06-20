@@ -13,7 +13,7 @@ plan → implement → test → review, pausing for you at the right moments.
 | `coder` agent    | 2 | sonnet | Implements the spec, summarizes changes to `.pipeline/changes.md`. |
 | `tester` agent   | 3 | sonnet | Writes and runs tests, records results to `.pipeline/test-results.md`. |
 | `reviewer` agent | 4 | opus   | Read-only final review; writes a SHIP / NEEDS WORK / BLOCK verdict to `.pipeline/review.md`. |
-| `/ship` command  | — | —      | Orchestrates all four stages in order, with stops for OPEN QUESTIONS and test failures. |
+| ` /feature-pipeline:ship` command  | — | —      | Orchestrates all four stages in order, with stops for OPEN QUESTIONS and test failures. |
 
 The agents hand work to each other through files in a `.pipeline/` directory.
 
@@ -50,10 +50,10 @@ machine.
 For example:
 
 ```
-/ship add a rate limiter to the public API
+ /feature-pipeline:ship add a rate limiter to the public API
 ```
 
-`/ship` clears stale handoff files, then runs the four stages in order:
+`/feature-pipeline:ship` clears stale handoff files, then runs the four stages in order:
 
 1. **planner** writes a spec — pauses to show you any open questions.
 2. **coder** implements the spec.
