@@ -1,0 +1,115 @@
+[
+  {
+    "name": "NumPy nanpercentile keepdims regression",
+    "kind": "Localized",
+    "description": "Synthetic bug: np.nanpercentile mishandles an all-NaN edge case when keepdims=True and shape preservation should match neighboring nan-reducers.",
+    "paths": {
+      "changed": [
+        "/private/tmp/context-benchmarks/numpy/numpy/lib/_nanfunctions_impl.py"
+      ],
+      "direct_dependencies": [
+        "/private/tmp/context-benchmarks/numpy/numpy/lib/_function_base_impl.py",
+        "/private/tmp/context-benchmarks/numpy/numpy/_core/numeric.py"
+      ],
+      "pattern_files": [],
+      "tests": [
+        "/private/tmp/context-benchmarks/numpy/numpy/lib/tests/test_nanfunctions.py"
+      ],
+      "config": [
+        "/private/tmp/context-benchmarks/numpy/pyproject.toml"
+      ],
+      "nearby_context": [
+        "/private/tmp/context-benchmarks/numpy/numpy/lib/tests/test_function_base.py",
+        "/private/tmp/context-benchmarks/numpy/numpy/lib/_histograms_impl.py",
+        "/private/tmp/context-benchmarks/numpy/numpy/lib/_shape_base_impl.py"
+      ]
+    }
+  },
+  {
+    "name": "NumPy broadcast_to writeability regression",
+    "kind": "Cross-cutting",
+    "description": "Synthetic bug: a broadcast_to / broadcast_arrays change regresses readonly vs writeable behavior for broadcast views and related shape logic.",
+    "paths": {
+      "changed": [
+        "/private/tmp/context-benchmarks/numpy/numpy/lib/_stride_tricks_impl.py"
+      ],
+      "direct_dependencies": [
+        "/private/tmp/context-benchmarks/numpy/numpy/lib/_array_utils_impl.py",
+        "/private/tmp/context-benchmarks/numpy/numpy/_core/numeric.py"
+      ],
+      "pattern_files": [],
+      "tests": [
+        "/private/tmp/context-benchmarks/numpy/numpy/lib/tests/test_stride_tricks.py",
+        "/private/tmp/context-benchmarks/numpy/numpy/lib/tests/test_shape_base.py",
+        "/private/tmp/context-benchmarks/numpy/numpy/_core/tests/test_indexing.py"
+      ],
+      "config": [
+        "/private/tmp/context-benchmarks/numpy/pyproject.toml"
+      ],
+      "nearby_context": [
+        "/private/tmp/context-benchmarks/numpy/numpy/lib/stride_tricks.py",
+        "/private/tmp/context-benchmarks/numpy/numpy/_core/shape_base.py",
+        "/private/tmp/context-benchmarks/numpy/numpy/_core/tests/test_regression.py"
+      ]
+    }
+  },
+  {
+    "name": "Flask url_for app-context regression",
+    "kind": "Localized",
+    "description": "Synthetic bug: url_for mishandles anchor or scheme behavior when building outside a request but inside an app context.",
+    "paths": {
+      "changed": [
+        "/private/tmp/context-benchmarks/flask/src/flask/app.py"
+      ],
+      "direct_dependencies": [
+        "/private/tmp/context-benchmarks/flask/src/flask/helpers.py",
+        "/private/tmp/context-benchmarks/flask/src/flask/globals.py"
+      ],
+      "pattern_files": [],
+      "tests": [
+        "/private/tmp/context-benchmarks/flask/tests/test_helpers.py",
+        "/private/tmp/context-benchmarks/flask/tests/test_appctx.py",
+        "/private/tmp/context-benchmarks/flask/tests/test_basic.py"
+      ],
+      "config": [
+        "/private/tmp/context-benchmarks/flask/pyproject.toml"
+      ],
+      "nearby_context": [
+        "/private/tmp/context-benchmarks/flask/src/flask/ctx.py",
+        "/private/tmp/context-benchmarks/flask/src/flask/sansio/app.py",
+        "/private/tmp/context-benchmarks/flask/tests/test_reqctx.py",
+        "/private/tmp/context-benchmarks/flask/tests/test_blueprints.py"
+      ]
+    }
+  },
+  {
+    "name": "Requests redirect auth-fragment regression",
+    "kind": "Cross-cutting",
+    "description": "Synthetic bug: redirect handling regresses either non-ASCII Location decoding, fragment preservation, or Authorization stripping across host and scheme changes.",
+    "paths": {
+      "changed": [
+        "/private/tmp/context-benchmarks/requests/src/requests/sessions.py"
+      ],
+      "direct_dependencies": [
+        "/private/tmp/context-benchmarks/requests/src/requests/utils.py",
+        "/private/tmp/context-benchmarks/requests/src/requests/models.py",
+        "/private/tmp/context-benchmarks/requests/src/requests/cookies.py",
+        "/private/tmp/context-benchmarks/requests/src/requests/auth.py"
+      ],
+      "pattern_files": [],
+      "tests": [
+        "/private/tmp/context-benchmarks/requests/tests/test_lowlevel.py",
+        "/private/tmp/context-benchmarks/requests/tests/test_requests.py"
+      ],
+      "config": [
+        "/private/tmp/context-benchmarks/requests/pyproject.toml"
+      ],
+      "nearby_context": [
+        "/private/tmp/context-benchmarks/requests/src/requests/adapters.py",
+        "/private/tmp/context-benchmarks/requests/src/requests/compat.py",
+        "/private/tmp/context-benchmarks/requests/tests/test_utils.py",
+        "/private/tmp/context-benchmarks/requests/tests/test_hooks.py"
+      ]
+    }
+  }
+]
